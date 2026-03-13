@@ -1,0 +1,60 @@
+body{
+font-family: Arial;
+background:#F5F7FA;
+margin:0;
+}
+
+/* หน้า index */
+.center-box{
+text-align:center;
+margin-top:150px;
+}
+
+.logo{
+color:#0099FF;
+font-size:40px;
+}
+
+.btn{
+display:inline-block;
+padding:12px 25px;
+margin:10px;
+text-decoration:none;
+border-radius:6px;
+color:white;
+}
+
+.blue{
+background:#0099FF;
+}
+
+.green{
+background:#009966;
+}
+
+/* หน้า login */
+.login-box{
+
+width:350px;
+margin:120px auto;
+background:white;
+padding:30px;
+border-radius:8px;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+
+}
+
+input{
+
+width:100%;
+padding:10px;
+margin:10px 0;
+border:1px solid #ddd;
+border-radius:5px;
+
+}
+
+input:focus{
+outline:none;
+border-color:#0099FF;
+}
