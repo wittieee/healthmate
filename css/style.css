@@ -1,14 +1,28 @@
 body{
 font-family: Arial;
-background:#F5F7FA;
 margin:0;
+background: linear-gradient(135deg, #0099FF, #009966);
+min-height:100vh;
 }
 
 /* หน้า index */
 .center-box{
 text-align:center;
 margin-top:150px;
+background: rgba(255,255,255,0.9);
+padding:40px;
+border-radius:12px;
+width:350px;
+margin-left:auto;
+margin-right:auto;
+box-shadow:0 8px 20px rgba(0,0,0,0.1);
 }
+
+.logo-img{
+width:150px;
+margin-bottom:20px;
+}
+
 
 .logo{
 color:#0099FF;
@@ -57,4 +71,176 @@ border-radius:5px;
 input:focus{
 outline:none;
 border-color:#0099FF;
+}
+
+
+/* หน้า Dashboard */
+
+.dashboard{
+display:flex;
+min-height:100vh;
+}
+
+/* Sidebar */
+
+.sidebar{
+width:220px;
+background:#009966;
+color:white;
+padding:20px;
+}
+
+.sidebar h2{
+margin-bottom:20px;
+}
+
+.sidebar a{
+display:block;
+color:white;
+text-decoration:none;
+margin:15px 0;
+padding:8px;
+border-radius:5px;
+}
+
+.sidebar a:hover{
+background:rgba(255,255,255,0.2);
+}
+
+/* Content */
+
+.content{
+flex:1;
+padding:30px;
+background:#F5F7FA;
+}
+
+.topbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:white;
+padding:15px 20px;
+border-radius:8px;
+margin-bottom:20px;
+box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+
+.topbar-right{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.profile-btn{
+background:#009966;
+color:white;
+padding:6px 12px;
+border-radius:5px;
+text-decoration:none;
+}
+
+.logout-btn{
+background:#0099FF;
+color:white;
+padding:6px 12px;
+border-radius:5px;
+text-decoration:none;
+}
+
+/* hover profile */
+.profile-btn:hover{
+background:#007a4d;
+}
+
+/* hover logout */
+.logout-btn:hover{
+background:#007acc;
+}
+
+.profile-btn,
+.logout-btn{
+transition:0.2s;
+font-size:14px;
+}
+
+
+/* หน้า Find Doctor */
+/* Search */
+
+.search{
+width:300px;
+padding:10px;
+border:1px solid #ddd;
+border-radius:5px;
+margin-bottom:20px;
+}
+
+/* Doctor List */
+.doctor-list{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+/* Card */
+.doctor-card{
+background:white;
+padding:15px;
+border-radius:10px;
+width:200px;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
+text-align:center;
+}
+
+/* รูป */
+.doctor-card img{
+width:100%;
+height:200px;
+object-fit:cover;
+object-position:center;
+border-radius:10px;
+object-position: top;
+}
+
+/* ปุ่ม */
+.doctor-card button{
+margin-top:10px;
+}
+
+
+/* หน้า Appointment list */
+
+.appointment-list{
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+/* Card */
+.appointment-card{
+background:white;
+padding:15px;
+border-radius:10px;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+
+
+.red{
+background:#ff4d4d;
+color:white;
+padding:6px 12px;
+border-radius:5px;
+text-decoration:none;
+}
+
+.status-pending{
+color:#0099FF;
+font-weight:bold;
+}
+
+.status-cancelled{
+color:red;
+font-weight:bold;
 }

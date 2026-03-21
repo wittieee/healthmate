@@ -1,35 +1,31 @@
-<?php
+<!DOCTYPE html>
+<html>
 
-include "connect.php";
+<head>
 
-$email = $_POST['email'];
-$password = $_POST['password'];
+<title>Login</title>
+<link rel="stylesheet" href="css/style.css">
 
-$sql = "SELECT * FROM users 
-        WHERE email='$email' 
-        AND password='$password'";
+</head>
 
-$result = mysqli_query($conn,$sql);
+<body>
 
-$user = mysqli_fetch_assoc($result);
+<div class="login-box">
 
-if($user){
+<h2>Login</h2>
 
-if($user['role']=="patient"){
-header("Location: patient_home.php");
-}
+<form action="check_login.php" method="POST">
 
-else if($user['role']=="doctor"){
-header("Location: doctor_home.php");
-}
+<input type="email" name="email" placeholder="Email" required>
 
-else{
-header("Location: admin_home.php");
-}
+<input type="password" name="password" placeholder="Password" minlength="4" required>
 
-}
-else{
-echo "Login failed";
-}
+<button class="btn blue">Login</button>
 
-?>
+</form>
+
+</div>
+
+</body>
+
+</html>
