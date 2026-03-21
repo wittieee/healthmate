@@ -19,7 +19,7 @@ $result = mysqli_query($conn, $sql);
 <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="doctor-appointments">
 
 <div class="dashboard">
 

@@ -421,16 +421,15 @@ padding:30px;
     margin:0 10px 10px;
 }
 
-/* หน้า doctor  appointment */
+/* หน้า doctor appointments */
 
-.appointment-list{
+.doctor-appointments .appointment-list{
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:20px;
 }
 
-
-.appointment-card{
+.doctor-appointments .appointment-card{
     background:white;
     padding:20px;
     border-radius:12px;
@@ -438,32 +437,27 @@ padding:30px;
     transition:0.2s;
 }
 
-.appointment-card:hover{
-transform:translateY(-5px);
+.doctor-appointments .appointment-card:hover{
+    transform:translateY(-5px);
 }
 
-.appointment-card h3{
+.doctor-appointments .appointment-card h3{
     margin-bottom:10px;
     color:#0099FF;
 }
 
-.btn{
-    padding:8px 15px;
-    border-radius:6px;
-    text-decoration:none;
-    color:white;
-    font-size:14px;
+/* หน้า doctor home */
+
+.doctor-home .appointment-card{
+    background:white;
+    padding:15px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.08);
 }
 
-.btn-group{
-    margin-top:10px;
-    display:flex;
-    gap:10px;
+.doctor-home .appointment-card h4{
+    font-size:16px;
+    color:#0099FF;
 }
 
-.green{
-    background:#009966;
-}
-.red{
-    background:#ff4d4d;
-}
+

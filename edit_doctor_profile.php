@@ -4,7 +4,11 @@ include "connect.php";
 
 $user_id = $_SESSION['user_id'];
 
-$sql = "SELECT * FROM users WHERE id='$user_id'";
+$sql = "SELECT users.*, doctors.specialty, doctors.experience
+        FROM users
+        JOIN doctors ON users.doctor_id = doctors.id
+        WHERE users.id='$user_id'";
+
 $result = mysqli_query($conn, $sql);
 $user = mysqli_fetch_assoc($result);
 ?>
@@ -30,7 +34,7 @@ $user = mysqli_fetch_assoc($result);
 <form action="update_doctor_profile.php" method="POST" enctype="multipart/form-data" class="profile-card">
 
     <div class="profile-img">
-        <img src="images/<?php echo $user['image'] ?? 'default.png'; ?>">
+        <img src="images/<?php echo $user['image'] ?? 'default.png'; ?>?v=<?php echo time(); ?>">
     </div>
 
     <input type="file" name="image">

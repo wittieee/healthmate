@@ -61,6 +61,7 @@ $user = mysqli_fetch_assoc($result);
         <p><strong>Phone:</strong> <?php echo $user['phone'] ?? '-'; ?></p>
 
         <p><strong>Specialty:</strong> <?php echo $user['specialty'] ?? '-'; ?></p>
+
         <p><strong>Experience:</strong> <?php echo $user['experience'] ?? '-'; ?> years</p>
 
     </div>
