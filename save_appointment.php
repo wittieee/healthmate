@@ -11,8 +11,8 @@ $date = $_POST['date'];
 $time = $_POST['time'];
 
 $sql = "INSERT INTO appointments 
-(doctor_id, patient_name, date, time, status, user_id)
-VALUES ('$doctor_id','$patient_name','$date','$time','pending','$user_id')";
+(doctor_id, date, time, status, user_id)
+VALUES ('$doctor_id','$date','$time','pending','$user_id')";
 
 mysqli_query($conn, $sql);
 

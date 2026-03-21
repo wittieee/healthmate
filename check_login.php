@@ -1,15 +1,15 @@
 <?php
-session_start();  
-
+session_start();
 include "connect.php";
 
 $email = $_POST['email'];
 $password = $_POST['password'];
 
-$sql = "SELECT * FROM users WHERE email='$email' AND password='$password'";
+$sql = "SELECT * FROM users 
+        WHERE email='$email' 
+        AND password='$password'";
 
 $result = mysqli_query($conn,$sql);
-
 $user = mysqli_fetch_assoc($result);
 
 if($user){
@@ -17,6 +17,8 @@ if($user){
     $_SESSION['user_id'] = $user['id'];
     $_SESSION['name'] = $user['name'];
     $_SESSION['role'] = $user['role'];
+
+    $_SESSION['doctor_id'] = $user['doctor_id'];
 
     if($user['role']=="patient"){
         header("Location: patient_home.php");
@@ -27,8 +29,8 @@ if($user){
     else{
         header("Location: admin_home.php");
     }
-}
-else{
+
+}else{
     echo "Login failed";
 }
 ?>

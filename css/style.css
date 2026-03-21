@@ -1,246 +1,469 @@
 body{
-font-family: Arial;
-margin:0;
-background: linear-gradient(135deg, #0099FF, #009966);
-min-height:100vh;
+    font-family: Arial;
+    margin:0;
+    background: linear-gradient(135deg, #0099FF, #009966);
+    min-height:100vh;
 }
 
 /* หน้า index */
 .center-box{
-text-align:center;
-margin-top:150px;
-background: rgba(255,255,255,0.9);
-padding:40px;
-border-radius:12px;
-width:350px;
-margin-left:auto;
-margin-right:auto;
-box-shadow:0 8px 20px rgba(0,0,0,0.1);
+    text-align:center;
+    margin-top:150px;
+    background: rgba(255,255,255,0.9);
+    padding:40px;
+    border-radius:12px;
+    width:350px;
+    margin-left:auto;
+    margin-right:auto;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
 }
 
 .logo-img{
-width:150px;
-margin-bottom:20px;
+    width:150px;
+    margin-bottom:20px;
 }
 
 
 .logo{
-color:#0099FF;
-font-size:40px;
+    color:#0099FF;
+    font-size:40px;
 }
 
 .btn{
-display:inline-block;
-padding:12px 25px;
-margin:10px;
-text-decoration:none;
-border-radius:6px;
-color:white;
+    display:inline-block;
+    padding:12px 25px;
+    margin:10px;
+    text-decoration:none;
+    border-radius:6px;
+    color:white;
 }
 
 .blue{
-background:#0099FF;
+    background:#0099FF;
 }
 
 .green{
-background:#009966;
+    background:#009966;
 }
 
 /* หน้า login */
 .login-box{
-
-width:350px;
-margin:120px auto;
-background:white;
-padding:30px;
-border-radius:8px;
-box-shadow:0 3px 10px rgba(0,0,0,0.1);
-
+    width:350px;
+    margin:120px auto;
+    background:white;
+    padding:30px;
+    border-radius:8px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
 }
 
 input{
-
-width:100%;
-padding:10px;
-margin:10px 0;
-border:1px solid #ddd;
-border-radius:5px;
-
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+    border:1px solid #ddd;
+    border-radius:5px;
 }
 
 input:focus{
-outline:none;
-border-color:#0099FF;
+    outline:none;
+    border-color:#0099FF;
 }
 
 
 /* หน้า Dashboard */
 
 .dashboard{
-display:flex;
-min-height:100vh;
+    display:flex;
+    min-height:100vh;
 }
 
 /* Sidebar */
 
 .sidebar{
-width:220px;
-background:#009966;
-color:white;
-padding:20px;
+    width:220px;
+    background:#009966;
+    color:white;
+    padding:20px;
 }
 
 .sidebar h2{
-margin-bottom:20px;
+    margin-bottom:20px;
 }
 
 .sidebar a{
-display:block;
-color:white;
-text-decoration:none;
-margin:15px 0;
-padding:8px;
-border-radius:5px;
+    display:block;
+    color:white;
+    text-decoration:none;
+    margin:15px 0;
+    padding:8px;
+    border-radius:5px;
 }
 
 .sidebar a:hover{
-background:rgba(255,255,255,0.2);
+    background:rgba(255,255,255,0.2);
 }
 
 /* Content */
 
 .content{
-flex:1;
-padding:30px;
-background:#F5F7FA;
+    flex:1;
+    padding:30px;
+    background:#F5F7FA;
 }
 
 .topbar{
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:white;
-padding:15px 20px;
-border-radius:8px;
-margin-bottom:20px;
-box-shadow:0 2px 5px rgba(0,0,0,0.1);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:white;
+    padding:15px 20px;
+    border-radius:8px;
+    margin-bottom:20px;
+    box-shadow:0 2px 5px rgba(0,0,0,0.1);
 }
 
 .topbar-right{
-display:flex;
-align-items:center;
-gap:15px;
+    display:flex;
+    align-items:center;
+    gap:15px;
 }
 
 .profile-btn{
-background:#009966;
-color:white;
-padding:6px 12px;
-border-radius:5px;
-text-decoration:none;
+    background:#009966;
+    color:white;
+    padding:6px 12px;
+    border-radius:5px;
+    text-decoration:none;
 }
 
 .logout-btn{
-background:#0099FF;
-color:white;
-padding:6px 12px;
-border-radius:5px;
-text-decoration:none;
+    background:#0099FF;
+    color:white;
+    padding:6px 12px;
+    border-radius:5px;
+    text-decoration:none;
 }
 
 /* hover profile */
 .profile-btn:hover{
-background:#007a4d;
+    background:#007a4d;
 }
 
 /* hover logout */
 .logout-btn:hover{
-background:#007acc;
+    background:#007acc;
 }
 
 .profile-btn,
 .logout-btn{
-transition:0.2s;
-font-size:14px;
+    transition:0.2s;
+    font-size:14px;
 }
 
 
 /* หน้า Find Doctor */
-/* Search */
 
 .search{
-width:300px;
-padding:10px;
-border:1px solid #ddd;
-border-radius:5px;
-margin-bottom:20px;
+    width:300px;
+    padding:10px;
+    border:1px solid #ddd;
+    border-radius:5px;
+    margin-bottom:20px;
 }
 
-/* Doctor List */
 .doctor-list{
-display:flex;
-gap:20px;
-flex-wrap:wrap;
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
 }
 
-/* Card */
 .doctor-card{
-background:white;
-padding:15px;
-border-radius:10px;
-width:200px;
-box-shadow:0 2px 8px rgba(0,0,0,0.1);
-text-align:center;
+    background:white;
+    padding:15px;
+    border-radius:10px;
+    width:200px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    text-align:center;
 }
 
-/* รูป */
 .doctor-card img{
-width:100%;
-height:200px;
-object-fit:cover;
-object-position:center;
-border-radius:10px;
-object-position: top;
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    object-position:center;
+    border-radius:10px;
+    object-position: top;
 }
 
-/* ปุ่ม */
 .doctor-card button{
-margin-top:10px;
+    margin-top:10px;
 }
 
 
 /* หน้า Appointment list */
 
 .appointment-list{
-display:flex;
-flex-direction:column;
-gap:15px;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
 }
 
-/* Card */
+
 .appointment-card{
-background:white;
-padding:15px;
-border-radius:10px;
-box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    background:white;
+    padding:15px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
 }
-
-
 
 .red{
-background:#ff4d4d;
-color:white;
-padding:6px 12px;
-border-radius:5px;
-text-decoration:none;
+    background:#ff4d4d;
+    color:white;
+    padding:6px 12px;
+    border-radius:5px;
+    text-decoration:none;
 }
 
 .status-pending{
-color:#0099FF;
-font-weight:bold;
+    color:#0099FF;
+    font-weight:bold;
 }
 
 .status-cancelled{
-color:red;
-font-weight:bold;
+    color:red;
+    font-weight:bold;
+}
+
+/* หน้า medical record */
+.record-list{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.record-card{
+    background:white;
+    padding:15px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* หน้า add record */
+textarea{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+    border:1px solid #ddd;
+    border-radius:5px;
+}
+
+/* หน้า profile patient */
+
+.content{
+background:#F5F7FA;
+padding:30px;
+}
+
+.profile-card{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+    width:500px;
+    margin:0 auto;
+}
+
+.profile-img{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.profile-img img{
+    width:130px;
+    height:130px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid #0099FF;
+}
+
+
+.profile-card h2{
+    text-align:center;
+    margin-bottom:20px;
+    color:#0099FF;
+}
+
+
+.profile-card hr{
+    margin:15px 0;
+    border:none;
+    border-top:1px solid #eee;
+}
+
+.profile-info{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px 20px;
+}
+
+.profile-info p{
+    margin:6px 0;
+    font-size:14px;
+    color:#333;
+}
+
+
+.profile-info strong{
+    color:#009966;
+}
+
+.profile-card .btn{
+    display:block;
+    text-align:center;
+    margin-top:20px;
+}
+
+
+.profile-card:hover{
+    transform:translateY(-3px);
+    transition:0.2s;
+}
+
+.profile-info{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px 25px;
+    margin-top:10px;
+}
+
+
+.profile-info p{
+    margin:6px 0;
+    font-size:14px;
+    color:#333;
+}
+
+
+.profile-info strong{
+    color:#009966;
+}
+
+.profile-info p:nth-child(10),
+.profile-info p:nth-child(11),
+.profile-info p:nth-child(12){
+    grid-column:1 / 3;
+}
+
+
+/* หน้า edit profile */
+.profile-card input,
+.profile-card textarea{
+    width:100%;
+    padding:10px;
+    margin:8px 0;
+    border:1px solid #ddd;
+    border-radius:5px;
+}
+
+/* หน้า home patient */
+
+.menu-grid{
+    display:flex;
+    gap:20px;
+    margin:20px 0;
+}
+
+.menu-card{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+    width:150px;
+    text-decoration:none;
+    color:black;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    transition:0.2s;
+}
+
+.menu-card:hover{
+    transform:translateY(-5px);
+}
+
+.menu-card img{
+    width:60px;
+    margin-bottom:10px;
+}
+
+.news-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.news-card{
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.news-card img{
+    width:100%;
+    height:150px;
+    object-fit:cover;
+    }
+
+.news-card h4{
+    margin:10px;
+}
+
+.news-card p{
+    margin:0 10px 10px;
+}
+
+/* หน้า doctor  appointment */
+
+.appointment-list{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+
+.appointment-card{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    transition:0.2s;
+}
+
+.appointment-card:hover{
+transform:translateY(-5px);
+}
+
+.appointment-card h3{
+    margin-bottom:10px;
+    color:#0099FF;
+}
+
+.btn{
+    padding:8px 15px;
+    border-radius:6px;
+    text-decoration:none;
+    color:white;
+    font-size:14px;
+}
+
+.btn-group{
+    margin-top:10px;
+    display:flex;
+    gap:10px;
+}
+
+.green{
+    background:#009966;
+}
+.red{
+    background:#ff4d4d;
 }
