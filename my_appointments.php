@@ -35,10 +35,10 @@ $result = mysqli_query($conn, $sql);
     <!-- Sidebar -->
     <div class="sidebar">
         <h2>HealthMate</h2>
-
         <a href="patient_home.php">Home</a>
         <a href="find_doctor.php">Find Doctor</a>
-        <a href="my_appointments.php">My Appointment</a>
+        <a href="my_appointments.php">Appointment</a>
+        <a href="patient_schedule.php">Your Schedule</a>
         <a href="medical_records.php">Medical Record</a>
     </div>
 

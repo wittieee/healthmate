@@ -17,53 +17,54 @@ $result = mysqli_query($conn, $sql);
 <html>
 
 <head>
-<title>Medical Records</title>
-<link rel="stylesheet" href="css/style.css">
+    <title>Medical Records</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<div class="dashboard">
+    <div class="dashboard">
 
-<div class="sidebar">
-    <h2>HealthMate</h2>
-    <a href="patient_home.php">Home</a>
-    <a href="find_doctor.php">Find Doctor</a>
-    <a href="my_appointments.php">My Appointment</a>
-    <a href="medical_records.php">Medical Record</a>
-</div>
-
-<div class="content">
-
-    <div class="topbar">
-        <h3>Medical Record</h3>
-        <div class="topbar-right">
-            <span>Welcome, <?php echo $_SESSION['name']; ?></span>
-            <a href="profile.php" class="profile-btn">Profile</a>
-            <a href="logout.php" class="logout-btn">Logout</a>
-        </div>
+    <div class="sidebar">
+        <h2>HealthMate</h2>
+        <a href="patient_home.php">Home</a>
+        <a href="find_doctor.php">Find Doctor</a>
+        <a href="my_appointments.php">Appointment</a>
+        <a href="patient_schedule.php">Your Schedule</a>
+        <a href="medical_records.php">Medical Record</a>
     </div>
 
-<div class="record-list">
+    <div class="content">
 
-<?php while($row = mysqli_fetch_assoc($result)){ ?>
+        <div class="topbar">
+            <h3>Medical Record</h3>
+            <div class="topbar-right">
+                <span>Welcome, <?php echo $_SESSION['name']; ?></span>
+                <a href="profile.php" class="profile-btn">Profile</a>
+                <a href="logout.php" class="logout-btn">Logout</a>
+            </div>
+        </div>
 
-<div class="record-card">
-    <h3><?php echo $row['doctor_name']; ?></h3>
-    <p>Date: <?php echo $row['date']; ?></p>
+    <div class="record-list">
 
-    <p><strong>Diagnosis:</strong> <?php echo $row['description']; ?></p>
+    <?php while($row = mysqli_fetch_assoc($result)){ ?>
 
-    <p><strong>Prescription:</strong> <?php echo $row['prescription']; ?></p>
-</div>
+    <div class="record-card">
+        <h3><?php echo $row['doctor_name']; ?></h3>
+        <p>Date: <?php echo $row['date']; ?></p>
 
-<?php } ?>
+        <p><strong>Diagnosis:</strong> <?php echo $row['description']; ?></p>
 
-</div>
+        <p><strong>Prescription:</strong> <?php echo $row['prescription']; ?></p>
+    </div>
 
-</div>
+    <?php } ?>
 
-</div>
+    </div>
+
+    </div>
+
+    </div>
 
 </body>
 </html>

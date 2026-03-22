@@ -23,6 +23,7 @@ if(!isset($_SESSION['user_id'])){
         <a href="patient_home.php">Home</a>
         <a href="find_doctor.php">Find Doctor</a>
         <a href="my_appointments.php">Appointment</a>
+        <a href="patient_schedule.php">Your Schedule</a>
         <a href="medical_records.php">Medical Record</a>
     </div>
 
@@ -41,9 +42,6 @@ if(!isset($_SESSION['user_id'])){
 
         <!-- Welcome -->
         <h2>Welcome, <?php echo $_SESSION['name']; ?></h2>
-        <p>How are you feeling today?</p>
-
-        <h3>Quick Menu</h3>
 
         <div class="menu-grid">
 
