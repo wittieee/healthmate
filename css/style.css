@@ -1,8 +1,8 @@
-body{
-    font-family: Arial;
-    margin:0;
-    background: linear-gradient(135deg, #43e97b, #38f9d7);
-    min-height:100vh;
+body{ 
+    font-family: Arial; 
+    margin:0; 
+    background: linear-gradient(20deg, #0099FF, #009966); 
+    min-height:100vh; 
 }
 
 /* หน้า index */
