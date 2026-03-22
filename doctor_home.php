@@ -43,7 +43,7 @@ $doctor_id = $_SESSION['doctor_id'];
         </div>
 
         <h2>Welcome, Dr. <?php echo $_SESSION['name']; ?></h2>
-        <p>Here is your schedule today</p>
+        <!-- <p>Here is your schedule today</p> -->
 
 
         <h3>Pending Appointments</h3>
