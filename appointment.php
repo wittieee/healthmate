@@ -42,16 +42,25 @@ $doctor = mysqli_fetch_assoc($result);
             <p><?php echo $doctor['specialty']; ?></p>
         </div>
 
-        <!-- Form -->
         <form action="save_appointment.php" method="POST">
 
             <input type="hidden" name="doctor_id" value="<?php echo $doctor_id; ?>">
 
-            <input type="text" name="patient_name" placeholder="Your Name" required>
+            <!-- <input type="text" name="patient_name" placeholder="Your Name" required> -->
 
             <input type="date" name="date" required>
 
-            <input type="time" name="time" required>
+            <select name="time" required>
+                <?php
+                $start = strtotime("06:00");
+                $end = strtotime("18:00");
+
+                for($time = $start; $time <= $end; $time += 1800){
+                    $value = date("H:i", $time);
+                    echo "<option value='$value'>$value</option>";
+                }
+                ?>
+            </select>
 
             <button class="btn blue">Confirm Booking</button>
 
