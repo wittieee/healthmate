@@ -55,7 +55,8 @@ if(!empty($user['dob'])){
 
         <div class="topbar-right">
             <span>Welcome, <?php echo $_SESSION['name']; ?></span>
-            <a href="logout.php" class="logout-btn">Logout</a>
+                <a href="profile.php" class="profile-btn">Profile</a>
+                <a href="logout.php" class="logout-btn" onclick="return confirm('Are you sure to logout?')">Logout</a>
         </div>
     </div>
 

@@ -33,7 +33,7 @@ $user = mysqli_fetch_assoc($result);
     <a href="doctor_home.php">Home</a>
     <a href="doctor_appointments.php">Appointments</a>
     <a href="doctor_records.php">Medical Records</a> 
-    <a href="doctor_profile.php">Profile</a>
+    <!-- <a href="doctor_profile.php">Profile</a> -->
 </div>
 
 <div class="content">

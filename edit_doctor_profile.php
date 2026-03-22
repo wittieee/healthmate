@@ -36,7 +36,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
         <a href="doctor_home.php">Home</a>
         <a href="doctor_appointments.php">Appointments</a>
         <a href="doctor_records.php">Medical Records</a> 
-        <a href="doctor_profile.php">Profile</a>
+        <!-- <a href="doctor_profile.php">Profile</a> -->
     </div>
 
     <div class="content">
