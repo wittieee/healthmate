@@ -110,10 +110,6 @@ $doctor_id = $_SESSION['doctor_id'];
                 <p>View Appointments</p>
             </a>
 
-            <a href="add_record.php" class="menu-card"> 
-                <img src="images/health-report.png">
-                <p>Add Record</p>
-            </a>
 
         </div>
 

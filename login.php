@@ -16,11 +16,12 @@
 
 <form action="check_login.php" method="POST">
 
-<input type="email" name="email" placeholder="Email" required>
+    <input type="email" name="email" placeholder="Email" required>
 
-<input type="password" name="password" placeholder="Password" minlength="4" required>
+    <input type="password" name="password" placeholder="Password" minlength="4" required>
 
-<button class="btn blue">Login</button>
+    <button class="btn blue">Login</button>
+    <p>Don't have an account? <a href="register.php">Register</a></p>
 
 </form>
 
