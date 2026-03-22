@@ -36,10 +36,11 @@ if(!empty($user['dob'])){
         <h2>HealthMate</h2>
 
         <?php if($_SESSION['role']=="patient"){ ?>
-            <a href="patient_home.php">Home</a>
-            <a href="find_doctor.php">Find Doctor</a>
-            <a href="my_appointments.php">My Appointment</a>
-            <a href="medical_records.php">Medical Record</a>
+        <a href="patient_home.php">Home</a>
+        <a href="find_doctor.php">Find Doctor</a>
+        <a href="my_appointments.php">Appointment</a>
+        <a href="patient_schedule.php">Your Schedule</a>
+        <a href="medical_records.php">Medical Record</a>
         <?php } else { ?>
             <a href="doctor_home.php">Home</a>
         <?php } ?>
