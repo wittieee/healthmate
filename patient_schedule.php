@@ -67,7 +67,7 @@ $result = mysqli_query($conn, $sql);
 
                     echo "
                     <div class='appointment-card'>
-                        <strong>{$row['time']}</strong> - Dr. {$row['doctor_name']}
+                        <strong>{$row['time']}</strong> - {$row['doctor_name']}
                         <br>
                         <span class='status $status'>$status</span>
                     </div>
