@@ -2,8 +2,13 @@
 session_start();
 include "connect.php";
 
-$user_id = $_GET['user_id'];
+$user_id = $_GET['user_id'] ?? null;
 $doctor_id = $_SESSION['doctor_id'];
+
+if(!$user_id){
+    echo "No patient selected";
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
@@ -22,6 +27,8 @@ $doctor_id = $_SESSION['doctor_id'];
         <h2>HealthMate</h2>
         <a href="doctor_home.php">Home</a>
         <a href="doctor_appointments.php">Appointments</a>
+        <a href="add_record.php">Add Record</a>
+        <a href="doctor_profile.php">Profile</a>
     </div>
 
     <div class="content">

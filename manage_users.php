@@ -7,18 +7,15 @@ if(!isset($_SESSION['user_id']) || $_SESSION['role'] != 'admin'){
     exit();
 }
 
-$users = mysqli_fetch_assoc(mysqli_query($conn, "SELECT COUNT(*) as total FROM users WHERE role='patient'"))['total'];
-
-$doctors = mysqli_fetch_assoc(mysqli_query($conn, "SELECT COUNT(*) as total FROM users WHERE role='doctor'"))['total'];
-
-$appointments = mysqli_fetch_assoc(mysqli_query($conn, "SELECT COUNT(*) as total FROM appointments"))['total'];
+$sql = "SELECT * FROM users WHERE role!='admin'";
+$result = mysqli_query($conn, $sql);
 ?>
 
 <!DOCTYPE html>
 <html>
 
 <head>
-<title>Admin Dashboard</title>
+<title>Manage Users</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -26,10 +23,8 @@ $appointments = mysqli_fetch_assoc(mysqli_query($conn, "SELECT COUNT(*) as total
 
 <div class="dashboard">
 
-
     <div class="sidebar">
         <h2>HealthMate</h2>
-
         <a href="admin_home.php">Dashboard</a>
         <a href="manage_users.php">Users</a>
         <a href="manage_doctors.php">Doctors</a>
@@ -40,7 +35,7 @@ $appointments = mysqli_fetch_assoc(mysqli_query($conn, "SELECT COUNT(*) as total
     <div class="content">
 
         <div class="topbar">
-            <h3>Admin Dashboard</h3>
+            <h3>Manage Users</h3>
 
             <div class="topbar-right">
                 <span><?php echo $_SESSION['name']; ?></span>
@@ -48,23 +43,30 @@ $appointments = mysqli_fetch_assoc(mysqli_query($conn, "SELECT COUNT(*) as total
             </div>
         </div>
 
-  
-        <div class="stats">
+        <div class="user-list">
 
-            <div class="stat-card">
-                <h2><?php echo $users; ?></h2>
-                <p>Patients</p>
+        <?php while($row = mysqli_fetch_assoc($result)){ ?>
+
+            <div class="user-card">
+
+                <h3><?php echo $row['name']; ?></h3>
+
+                <p><strong>Email:</strong> <?php echo $row['email']; ?></p>
+                <p><strong>Role:</strong> <?php echo $row['role']; ?></p>
+
+                <div class="btn-group">
+
+                    <a href="delete_user.php?id=<?php echo $row['id']; ?>" 
+                       class="btn red"
+                       onclick="return confirm('Delete this user?')">
+                       Delete
+                    </a>
+
+                </div>
+
             </div>
 
-            <div class="stat-card">
-                <h2><?php echo $doctors; ?></h2>
-                <p>Doctors</p>
-            </div>
-
-            <div class="stat-card">
-                <h2><?php echo $appointments; ?></h2>
-                <p>Appointments</p>
-            </div>
+        <?php } ?>
 
         </div>
 

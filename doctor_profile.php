@@ -10,8 +10,7 @@ if(!isset($_SESSION['user_id'])){
 $user_id = $_SESSION['user_id'];
 
 $sql = "SELECT users.*, doctors.specialty, doctors.experience, doctors.image AS doctor_image
-        FROM users
-        JOIN doctors ON users.doctor_id = doctors.id
+        FROM users JOIN doctors ON users.doctor_id = doctors.id
         WHERE users.id='$user_id'";
 $result = mysqli_query($conn, $sql);
 $user = mysqli_fetch_assoc($result);
@@ -29,13 +28,14 @@ $user = mysqli_fetch_assoc($result);
 
 <div class="dashboard">
 
-<!-- Sidebar -->
 <div class="sidebar">
     <h2>HealthMate</h2>
     <a href="doctor_home.php">Home</a>
+    <a href="doctor_appointments.php">Appointments</a>
+    <a href="doctor_records.php">Medical Records</a> 
+    <a href="doctor_profile.php">Profile</a>
 </div>
 
-<!-- Content -->
 <div class="content">
 
 <div class="topbar">
@@ -43,6 +43,7 @@ $user = mysqli_fetch_assoc($result);
 
     <div class="topbar-right">
         <span>Dr. <?php echo $_SESSION['name']; ?></span>
+        <a href="doctor_profile.php" class="profile-btn">Profile</a>
         <a href="logout.php" class="logout-btn">Logout</a>
     </div>
 </div>

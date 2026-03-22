@@ -51,7 +51,6 @@ $user = mysqli_fetch_assoc($result);
 
         <h2>Edit Profile</h2>
 
-
         <div class="profile-img">
             <img src="images/<?php echo $user['image'] ?? 'default.png'; ?>">
         </div>

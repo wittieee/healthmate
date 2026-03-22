@@ -28,12 +28,12 @@ $result = mysqli_query($conn, $sql);
         <h2>HealthMate</h2>
         <a href="doctor_home.php">Home</a>
         <a href="doctor_appointments.php">Appointments</a>
+        <a href="doctor_records.php">Medical Records</a> 
+        <a href="doctor_profile.php">Profile</a>
     </div>
 
-    <!-- Content -->
     <div class="content">
 
-        <!-- Topbar -->
         <div class="topbar">
             <h3>Appointments</h3>
 
@@ -44,7 +44,6 @@ $result = mysqli_query($conn, $sql);
             </div>
         </div>
 
-        <!-- Card List -->
         <div class="appointment-list">
 
         <?php while($row = mysqli_fetch_assoc($result)){ ?>
@@ -64,6 +63,8 @@ $result = mysqli_query($conn, $sql);
                         <a href="update_status.php?id=<?php echo $row['id']; ?>&status=cancelled" class="btn red">Reject</a>
                     </div>
                 <?php } ?>
+                
+                <a href="add_record.php?user_id=<?php echo $row['user_id']; ?>" class="btn blue">Add Record</a>
 
             </div>
 

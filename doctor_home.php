@@ -22,27 +22,26 @@ $doctor_id = $_SESSION['doctor_id'];
 
 <div class="dashboard">
 
-    <!-- Sidebar -->
     <div class="sidebar">
         <h2>HealthMate</h2>
         <a href="doctor_home.php">Home</a>
         <a href="doctor_appointments.php">Appointments</a>
+        <a href="doctor_records.php">Medical Records</a> 
+        <a href="doctor_profile.php">Profile</a>
     </div>
 
-    <!-- Content -->
     <div class="content">
 
-        <!-- Topbar -->
         <div class="topbar">
             <h3>Dashboard</h3>
 
             <div class="topbar-right">
                 <span>Dr. <?php echo $_SESSION['name']; ?></span>
+                <a href="doctor_profile.php" class="profile-btn">Profile</a>
                 <a href="logout.php" class="logout-btn">Logout</a>
             </div>
         </div>
 
-        <!-- Welcome -->
         <h2>Welcome, Dr. <?php echo $_SESSION['name']; ?></h2>
         <p>Here is your schedule today</p>
 
@@ -52,8 +51,7 @@ $doctor_id = $_SESSION['doctor_id'];
         <div class="appointment-list">
 
         <?php
-        $sql = "SELECT appointments.*, users.name 
-                FROM appointments
+        $sql = "SELECT appointments.*, users.name FROM appointments
                 JOIN users ON appointments.user_id = users.id
                 WHERE appointments.doctor_id='$doctor_id'
                 AND status='pending'";
@@ -85,8 +83,7 @@ $doctor_id = $_SESSION['doctor_id'];
         <?php
         $today = date('Y-m-d');
 
-        $sql = "SELECT appointments.*, users.name 
-                FROM appointments
+        $sql = "SELECT appointments.*, users.name FROM appointments
                 JOIN users ON appointments.user_id = users.id
                 WHERE appointments.doctor_id='$doctor_id'
                 AND date='$today'";
@@ -106,13 +103,16 @@ $doctor_id = $_SESSION['doctor_id'];
 
         </div>
 
-        <h3>Quick Actions</h3>
-
         <div class="menu-grid">
 
             <a href="doctor_appointments.php" class="menu-card">
                 <img src="images/schedule.png">
                 <p>View Appointments</p>
+            </a>
+
+            <a href="add_record.php" class="menu-card"> 
+                <img src="images/health-report.png">
+                <p>Add Record</p>
             </a>
 
         </div>
@@ -122,4 +122,4 @@ $doctor_id = $_SESSION['doctor_id'];
 </div>
 
 </body>
-</html>
+</html> 

@@ -219,7 +219,7 @@ input:focus{
 .red{
     background:#ff4d4d;
     color:white;
-    padding:6px 12px;
+
     border-radius:5px;
     text-decoration:none;
 }
@@ -460,4 +460,136 @@ padding:30px;
     color:#0099FF;
 }
 
+.doctor-home .appointment-list{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
 
+.btn-group{
+    display:flex;
+    gap:10px;
+}
+
+.btn-group .btn{
+    width:50px;     
+    height:20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:0 !important;
+}
+
+/* หน้า doctor records */
+
+.record-list{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.record-card{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+
+.record-card h3{
+    color:#0099FF;
+    margin-bottom:10px;
+}
+
+.record-card p{
+    margin:5px 0;
+}
+
+
+/* หน้า admin dashboard */
+
+.stats{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:20px;
+    margin-top:20px;
+}
+
+.stat-card{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 4px 10px rgba(0,0,0,0.08);
+}
+
+.stat-card h2{
+    font-size:32px;
+    color:#0099FF;
+}
+
+/* หน้า manage users */
+
+.user-list{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+    margin-top:20px;
+}
+
+.user-card{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.08);
+}
+
+.user-card h3{
+    color:#0099FF;
+    margin-bottom:10px;
+}
+
+/* หน้า manage doctors */
+
+.doctor-list{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    gap:20px;
+    margin-top:20px;
+}
+
+.doctor-card{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 4px 10px rgba(0,0,0,0.08);
+}
+
+.doctor-img{
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:10px;
+}
+
+/*หน้า admin_appointment status สี */
+
+.status{
+    padding:4px 10px;
+    border-radius:5px;
+    color:white;
+    font-size:12px;
+}
+
+.status.pending{
+    background:orange;
+}
+
+.status.confirmed{
+    background:#009966;
+}
+
+.status.cancelled{
+    background:#ff4d4d;
+}
