@@ -67,7 +67,7 @@ $user = mysqli_fetch_assoc($result2);
 
         <input type="file" name="image">
 
-        <button class="btn green">Update</button>
+        <button class="btn blue">Update</button>
 
     </form>
 
