@@ -27,8 +27,7 @@ if(!$user_id){
         <h2>HealthMate</h2>
         <a href="doctor_home.php">Home</a>
         <a href="doctor_appointments.php">Appointments</a>
-        <a href="add_record.php">Add Record</a>
-        <a href="doctor_profile.php">Profile</a>
+        <a href="doctor_records.php">Medical Records</a> 
     </div>
 
     <div class="content">
