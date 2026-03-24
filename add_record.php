@@ -37,6 +37,7 @@ if(!$user_id){
 
             <div class="topbar-right">
                 <span>Dr. <?php echo $_SESSION['name']; ?></span>
+                <a href="doctor_profile.php" class="profile-btn">Profile</a>
                 <a href="logout.php" class="logout-btn">Logout</a>
             </div>
         </div>
